@@ -9,12 +9,22 @@ import {
   Select
 } from '@material-ui/core';
 
+import PlaceDetails from '../Place/PlaceDetails';
+
 import useStyles from './styles';
 
 function List() {
   const classes = useStyles();
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
+
+  const places = [
+    {
+      name: 'Cool places',
+      name: 'Best Beer places',
+      name: 'Best cook places'
+    }
+  ]
   return (
     <div className={classes.container}>
       <Typography variant="h4">Restaurants, Hotels and Attractions around you</Typography>
@@ -35,6 +45,15 @@ function List() {
           <MenuItem value={4.5}>Above 4.5</MenuItem>
         </Select>
       </FormControl>
+      <Grid container spacing={3} className={classes.list}>
+        {
+          places?.map((place, i) => (
+            <Grid item key={i} xs={12}>
+              <PlaceDetails />
+            </Grid>
+          ))
+        }
+      </Grid>
     </div>
   )
 }
