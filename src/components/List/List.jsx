@@ -19,17 +19,15 @@ function List() {
   const [rating, setRating] = useState('');
 
   const places = [
-    {
-      name: 'Cool places',
-      name: 'Best Beer places',
-      name: 'Best cook places',
-      name: 'Cool places',
-      name: 'Best Beer places',
-      name: 'Best cook places',
-      name: 'Cool places',
-      name: 'Best Beer places',
-      name: 'Best cook places',
-    }
+      {name: 'Cool places'},
+      {name: 'Best Beer places'},
+      {name: 'Best places'},
+      {name: 'Cool places'},
+      {name: 'Best Beer places'},
+      {name: 'Best cook places'},
+      {name: 'Cool places'},
+      {name: 'Best Beer places'},
+      {name: 'Best cook places'},
   ]
   return (
     <div className={classes.container}>
