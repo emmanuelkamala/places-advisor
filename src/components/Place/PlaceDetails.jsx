@@ -1,9 +1,9 @@
 import React from 'react'
 
-function PlaceDetails() {
+function PlaceDetails({ place }) {
   return (
     <div>
-      Place Details
+      <h1>{place.name}</h1>
     </div>
   )
 }

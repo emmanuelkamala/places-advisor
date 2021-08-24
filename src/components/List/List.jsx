@@ -22,7 +22,13 @@ function List() {
     {
       name: 'Cool places',
       name: 'Best Beer places',
-      name: 'Best cook places'
+      name: 'Best cook places',
+      name: 'Cool places',
+      name: 'Best Beer places',
+      name: 'Best cook places',
+      name: 'Cool places',
+      name: 'Best Beer places',
+      name: 'Best cook places',
     }
   ]
   return (
@@ -49,7 +55,7 @@ function List() {
         {
           places?.map((place, i) => (
             <Grid item key={i} xs={12}>
-              <PlaceDetails />
+              <PlaceDetails  place={place} />
             </Grid>
           ))
         }
