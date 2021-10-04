@@ -1,10 +1,55 @@
 import React from 'react';
+import {
+  Box,
+  Card,
+  Button,
+  Typography,
+  CardMedia,
+  CardContent,
+  CardActions,
+  Chip
+} from '@material-ui/core';
+import { LocationOnIcon, PhoneIcon } from '@material-ui/icons';
+import Rating from '@material-ui/lab/Rating';
+import useStyles from './styles';
 
 function PlaceDetails({ place }) {
+  const classes = useStyles()
   return (
-    <div>
-      <h1>{place.name}</h1>
-    </div>
+    <Card elevation={6}>
+      <CardMedia 
+        style={{ height: 350 }}
+        image={ place.photo ? place.photo.images.large.url :
+          'https://assets.hyatt.com/content/dam/hyatt/hyattdam/images/2018/09/10/1133/Hyatt-Regency-Dar-es-Salaam-The-Kilimanjaro-P133-Level-8-Rooftop-Bar-Sunset.jpg/Hyatt-Regency-Dar-es-Salaam-The-Kilimanjaro-P133-Level-8-Rooftop-Bar-Sunset.4x3.jpg?imwidth=1280'
+        }
+        title={place.name}
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5">{place.name}</Typography>
+        <Box display="flex" justifyContent="space-between">
+          <Typography variant="subtitle1">Price Level</Typography>
+          <Typography gutterBottom variant="subtitle1">{place.price_level}</Typography>
+        </Box>
+        <Box display="flex" justifyContent="space-between">
+          <Typography variant="subtitle1">Ranking</Typography>
+          <Typography gutterBottom variant="subtitle1">{place.ranking}</Typography>
+        </Box>
+        {
+          place?.awards?.map((award) => (
+            <Box display="flex" justifyContent="space-between" alignItems="center" >
+              <img src={award.images.small} alt={award.display_name} />
+              <Typography variant="subtitle2" color="textSecondary">{award.display_name}</Typography>
+            </Box>
+          ))
+        }
+
+        {
+          place?.cuisine?.map(({ name }) => (
+            <Chip key={name} size="small" label={name} className={classes.chip} />
+          ))
+        }
+      </CardContent>
+    </Card>
   )
 }
 
