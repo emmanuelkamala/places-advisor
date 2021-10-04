@@ -9,7 +9,7 @@ import useStyles from './styles';
 function Map({ setCoordinates, setBounds, coordinates }) {
   const classes = useStyles();
   const isMobile = useMediaQuery('(min-width: 600px)');
-  // const coordinates = { lat: -6.99, lng: 7.8 }
+  //const coordinates = { lat: -6.99, lng: 7.8 }
 
   return (
     <div className={classes.mapContainer}>
