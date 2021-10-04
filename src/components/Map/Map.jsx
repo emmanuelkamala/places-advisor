@@ -60,11 +60,11 @@ function Map({ weatherData, setCoordinates, setBounds, coordinates, places, setC
         }
 
         {
-          weatherData?.list?.map((data, i) => {
+          weatherData?.list?.map((data, i) => (
             <div key={i} lat={data.coord.lat} lng={data.coord.lon}>
               <img height={10} src={`https://openweathermap.org/img/w/${data.weather[0].icon}.png`} alt='myweather' />
             </div>
-          })
+          ))
         }
       </GoogleMapReact>
       
