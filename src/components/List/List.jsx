@@ -13,7 +13,7 @@ import PlaceDetails from '../Place/PlaceDetails';
 
 import useStyles from './styles';
 
-function List({ places }) {
+function List({ places, childClicked }) {
   const classes = useStyles();
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
