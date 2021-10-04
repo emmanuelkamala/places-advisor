@@ -2,7 +2,7 @@
 
 This is a finders App, where a user can search on places such as restaurants, hotels and places for tour in different cities across the world. The app shows also the reviews of such searched places and more details about the place via a link to the places' trip advisor page.
 
-![screenshot](./frontend/public/images/1.png)
+![screenshot](./public/images/1.png)
 
 # Live Demo
 <a href="https://ejokaplaces.netlify.app">Live Demo</a>
