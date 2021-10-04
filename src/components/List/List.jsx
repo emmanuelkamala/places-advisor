@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {
-  CirculaProgress,
+  CircularProgress,
   Grid,
   Typography,
   InputLabel,
@@ -13,22 +13,11 @@ import PlaceDetails from '../Place/PlaceDetails';
 
 import useStyles from './styles';
 
-function List() {
+function List({ places }) {
   const classes = useStyles();
   const [type, setType] = useState('restaurants');
   const [rating, setRating] = useState('');
 
-  const places = [
-      {name: 'Cool places'},
-      {name: 'Best Beer places'},
-      {name: 'Best places'},
-      {name: 'Cool places'},
-      {name: 'Best Beer places'},
-      {name: 'Best cook places'},
-      {name: 'Cool places'},
-      {name: 'Best Beer places'},
-      {name: 'Best cook places'},
-  ]
   return (
     <div className={classes.container}>
       <Typography variant="h4">Restaurants, Hotels and Attractions around you</Typography>

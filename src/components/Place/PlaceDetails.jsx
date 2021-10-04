@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function PlaceDetails({ place }) {
   return (
@@ -8,4 +8,4 @@ function PlaceDetails({ place }) {
   )
 }
 
-export default PlaceDetails
+export default PlaceDetails;
