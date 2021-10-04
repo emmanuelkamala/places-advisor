@@ -9,7 +9,7 @@ function App() {
 
   const [places, setPlaces] = useState([]);
   const [coordinates, setCoordinates] = useState({});
-  const [bounds, setBounds] = useState(null);
+  const [bounds, setBounds] = useState({});
   const [childClicked, setChildClicked] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [type, setType] = useState('restaurants');
@@ -29,21 +29,21 @@ function App() {
 
   useEffect(() => {
     setIsLoading(true)
-    if (bounds) {
+    if (bounds.sw && bounds.ne) {
       getPlacesData(type, bounds.sw, bounds.ne)
       .then((data) => {
-          setPlaces(data);
+          setPlaces(data?.filter((place) => place.name && place.num_reviews > 0));
           setFilteredPlaces([]);
           setIsLoading(false);
         }
       )
     }
-  }, [type, coordinates, bounds])
+  }, [type, bounds])
 
   return (
     <div>
       <CssBaseline />
-      <Header />
+      <Header setCoordinates={setCoordinates} />
       <Grid container spacing={3} style={{ width: '100%' }}>
         <Grid item xs={12} md={4}>
           <List 
