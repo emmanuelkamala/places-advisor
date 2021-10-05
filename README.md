@@ -1,6 +1,6 @@
 # Find Places App
 
-This is a finders App, where a user can search on places such as restaurants, hotels and places for tour in different cities across the world. The app shows also the reviews of such searched places and more details about the place via a link to the places' trip advisor page.
+This is an app that helps a user find places. A user can search for different places such as restaurants, hotels, and places that one can tour in different cities across the world. The app also shows the reviews of such searched places and a link to the trip advisor's page and/or the place's website if any so as to get more details about the place.
 
 ![screenshot](./public/images/1.png)
 
