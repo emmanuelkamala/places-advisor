@@ -19,7 +19,7 @@ function Header({ setCoordinates }) {
   }
 
   return (
-    <AppBar position='static'>
+    <AppBar position='sticky'>
       <Toolbar className={classes.toolbar}>
         <Typography variant='h5' className='classes.title'>
           Find Places
