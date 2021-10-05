@@ -19,7 +19,7 @@ function Header({ setCoordinates }) {
   }
 
   return (
-    <AppBar position='static'>
+    <AppBar position='static' style={{ backgroundColor: "green" }}>
       <Toolbar className={classes.toolbar}>
         <Typography variant='h5' className='classes.title'>
           Find Places
