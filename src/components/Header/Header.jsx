@@ -22,7 +22,7 @@ function Header({ setCoordinates }) {
     <AppBar position='static'>
       <Toolbar className={classes.toolbar}>
         <Typography variant='h5' className='classes.title'>
-        Is Advocate Anita Pascal Really Free Today?        </Typography>
+        Is HayaKyusa Free Today?        </Typography>
         <Box display='flex'>
           <Typography variant='h6' className='classes.title'>
             Search places
